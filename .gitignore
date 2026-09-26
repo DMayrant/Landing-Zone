@@ -1,0 +1,19 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# Variable files — may contain account IDs/emails/secrets
+
+*.tfvars.json
+
+# Terraform plans
+*.tfplan
+tfplan
+plan.out
+
+# macOS
+.DS_Store

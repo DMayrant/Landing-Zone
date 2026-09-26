@@ -1,0 +1,14 @@
+resource "aws_organizations_organization" "main" {
+  feature_set = "ALL"
+
+  enabled_policy_types = [
+    "SERVICE_CONTROL_POLICY",
+    "TAG_POLICY"
+  ]
+
+  aws_service_access_principals = ["fms.amazonaws.com"]
+
+  lifecycle {
+    prevent_destroy = false
+  }
+}
