@@ -5,6 +5,7 @@
 .terraform.lock.hcl
 crash.log
 crash.*.log
+bedrock_call.zip
 
 # Variable files — may contain account IDs/emails/secrets
 
