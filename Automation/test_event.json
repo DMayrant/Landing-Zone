@@ -1,0 +1,10 @@
+{
+  "account": "123456789012",
+  "region": "us-east-1",
+  "detail": {
+    "id": "landing-zone-test-001",
+    "type": "UnauthorizedAccess:EC2/SSHBruteForce",
+    "severity": 5,
+    "description": "TEST ONLY: Simulated suspicious SSH activity."
+  }
+}
