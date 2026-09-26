@@ -22,17 +22,18 @@ resource "aws_lambda_function" "bedrock_analyzer" {
   role = aws_iam_role.bedrock_lambda_role.arn
 
   runtime = "python3.12"
-  handler = "bedrock_findings.lambda_handler"
+  handler = "bedrock_finding.lambda_handler"
 
   timeout     = 30
   memory_size = 256
 
   environment {
     variables = {
-      BEDROCK_MODEL_ID = "nvidia.nemotron-nano-12b-v2"
-      AWS_REGION_NAME  = "us-east-1"
+      MODEL_ID      = "nvidia.nemotron-nano-12b-v2"
+      SNS_TOPIC_ARN = aws_sns_topic.security_alerts.arn
     }
   }
+
 }
 
 
